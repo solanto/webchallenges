@@ -3,10 +3,11 @@ var ctx = canvas.getContext("2d");
 var drops = [];
 var numberOfRaindrops = 500;
 var dropColor = "#8a2be2";
+var backgroundColor = "#e6e6fa";
+var motionBlurAmount = 0.95;
 
 canvas.width = 900;
 canvas.height = 500;
-ctx.fillStyle = dropColor;
 
 function random(min, max) {
   return Math.floor((Math.random() * max) + min);
@@ -43,12 +44,20 @@ function dropFall() {
 function showDrop() {
   ctx.beginPath();
   ctx.rect(drops[i].x, drops[i].y, drops[i].width, drops[i].length);
+  ctx.fillStyle = dropColor;
   ctx.fill();
   ctx.closePath();
 }
 
+function clearFrameWithMotionBlur() {
+  ctx.globalAlpha = motionBlurAmount;
+  ctx.fillStyle = backgroundColor;
+  ctx.fillRect(0, 0, canvas.width, canvas.height);
+  ctx.globalAlpha = 1;
+}
+
 function draw() {
-  ctx.clearRect(0, 0, canvas.width, canvas.height);
+  clearFrameWithMotionBlur();
   for (i = 0; i < numberOfRaindrops; i++) { 
     dropFall();
     showDrop();
