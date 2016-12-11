@@ -3,12 +3,16 @@ var ctx = canvas.getContext("2d");
 var drops = [];
 var numberOfRaindrops = 100;
 
+function random(min, max) {
+	return Math.floor((Math.random() * max) + min);
+}
+
 function Raindrop() {
-  this.x = canvas.width/2,
-  this.y = 0,
-  this.length = 10,
-  this.width = this.length/4,
-  this.speed = 1
+  this.x = random(0, canvas.width),
+  this.y = random(-20, -200),
+  this.length = random(4, 20),
+  this.width = 2.25,
+  this.speed = random(4, 10)
 }
 
 function populateRain() {
