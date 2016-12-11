@@ -31,8 +31,8 @@ function show() {
 
 function draw() {
   for (i = 0; i < numberOfRaindrops; i++) { 
-    drops[i].fall();
-    drops[i].show();
+    fall();
+    show();
   }
 }
 
