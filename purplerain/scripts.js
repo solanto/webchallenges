@@ -2,7 +2,6 @@ var canvas = document.getElementById("sky");
 var ctx = canvas.getContext("2d");
 var drops = [];
 var numberOfRaindrops = 100;
-var dropNumber;
 
 function Raindrop() {
   this.x = canvas.width/2,
@@ -19,19 +18,19 @@ function populateRain() {
 }
 
 function fall() {
-  drops[dropNumber].y += Raindrop.speed
+  drops[i].y += drops[i].speed
 }
 
 function show() {
   ctx.beginPath();
-  ctx.rect(drops[dropNumber].x, drops[dropNumber].y, drops[dropNumber].width, drops[dropNumber].length);
+  ctx.rect(drops[i].x, drops[i].y, drops[i].width, drops[i].length);
   ctx.fillStyle = "#d829ff";
   ctx.fill();
   ctx.closePath();
 }
 
 function draw() {
-  for (dropNumber = 0; dropNumber < numberOfRaindrops; dropNumber++) { 
+  for (i = 0; i < numberOfRaindrops; i++) { 
     fall();
     show();
   }
