@@ -1,3 +1,10 @@
+figure {
+  width:150px;
+  height:150px;
+  border-radius:10%;
+  overflow:hidden;
+}
+
 canvas {
   width: 900px;
   height: 500px;
