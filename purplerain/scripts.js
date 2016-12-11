@@ -1,6 +1,6 @@
 var canvas = document.getElementById("myCanvas");
 var ctx = canvas.getContext("2d");
-var rain = [];
+var drops = [];
 var numberOfRaindrops = 100;
 
 function Raindrop() {
@@ -13,7 +13,7 @@ function Raindrop() {
 
 function populateRain() {
   for (i = 0; i < numberOfRaindrops; i++) { 
-    rain[i] = new Raindrop;
+    drops[i] = new Raindrop;
   }
 }
 
@@ -27,4 +27,11 @@ function show() {
   ctx.fillStyle = "#0095DD";
   ctx.fill();
   ctx.closePath();
+}
+
+function draw() {
+  for (i = 0; i < numberOfRaindrops; i++) { 
+    drops[i].fall();
+    drops[i].show();
+  }
 }
