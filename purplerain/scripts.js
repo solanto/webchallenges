@@ -34,6 +34,7 @@ function show() {
 }
 
 function draw() {
+  ctx.clearRect(0, 0, canvas.width, canvas.height);
   for (i = 0; i < numberOfRaindrops; i++) { 
     fall();
     show();
