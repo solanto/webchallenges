@@ -2,9 +2,12 @@ var canvas = document.getElementById("sky");
 var ctx = canvas.getContext("2d");
 var drops = [];
 var numberOfRaindrops = 500;
-var gravity = 0.05;
+var gravity = 0.5;
+var dropColor = "#8a2be2";
+
 canvas.width = 900;
 canvas.height = 500;
+ctx.fillStyle = dropColor;
 
 function random(min, max) {
 	return Math.floor((Math.random() * max) + min);
@@ -35,7 +38,6 @@ function dropFall() {
 function showDrop() {
   ctx.beginPath();
   ctx.rect(drops[i].x, drops[i].y, drops[i].width, drops[i].length);
-  ctx.fillStyle = "#8a2be2";
   ctx.fill();
   ctx.closePath();
 }
