@@ -7,7 +7,7 @@
   overflow: hidden;
   width: 900px;
   margin: 0 auto;
-  margin-top: (100vh-500px)/2
+  margin-top: (100vh-500px)/2;
   -webkit-mask-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAIAAACQd1PeAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAA5JREFUeNpiYGBgAAgwAAAEAAGbA+oJAAAAAElFTkSuQmCC);
 }
 
