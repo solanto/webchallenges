@@ -34,7 +34,7 @@ function fall() {
 function show() {
   ctx.beginPath();
   ctx.rect(drops[i].x, drops[i].y, drops[i].width, drops[i].length);
-  ctx.fillStyle = "#d829ff";
+  ctx.fillStyle = "#8a2be2";
   ctx.fill();
   ctx.closePath();
 }
