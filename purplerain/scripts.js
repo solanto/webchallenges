@@ -18,12 +18,12 @@ function populateRain() {
 }
 
 function fall() {
-  Raindrop.y += Raindrop.speed
+  drops[i].y += Raindrop.speed
 }
 
 function show() {
   ctx.beginPath();
-  ctx.rect(brickX, brickY, brickWidth, brickHeight);
+  ctx.rect(drops[i].x, drops[i].y, drops[i].width, drops[i].length);
   ctx.fillStyle = "#0095DD";
   ctx.fill();
   ctx.closePath();
@@ -35,3 +35,5 @@ function draw() {
     drops[i].show();
   }
 }
+
+setInterval(draw, 10);
