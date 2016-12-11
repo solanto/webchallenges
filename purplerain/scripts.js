@@ -2,7 +2,7 @@ var canvas = document.getElementById("sky");
 var ctx = canvas.getContext("2d");
 var drops = [];
 var numberOfRaindrops = 500;
-var gravity = 0.1;
+var gravity = 0.07;
 var dropColor = "#8a2be2";
 
 canvas.width = 900;
