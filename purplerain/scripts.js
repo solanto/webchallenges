@@ -1,14 +1,14 @@
+var numberOfRaindrops = 500;
+var dropColor = "#8a2be2";
+var motionBlurAmount = 0.2;
+
 var canvas = document.getElementById("sky");
 var ctx = canvas.getContext("2d");
 var drops = [];
-var numberOfRaindrops = 500;
-var dropColor = "#8a2be2";
-var backgroundColor = "#e6e6fa";
-var motionBlurAmount = 0.2;
 var backgroundOpacity = 1 - motionBlurAmount;
-
-canvas.width = 900;
-canvas.height = 500;
+var backgroundColor = window.getComputedStyle(canvas, null).getPropertyValue('background-color');
+canvas.width = window.getComputedStyle(canvas, null).getPropertyValue('width');
+canvas.height = window.getComputedStyle(canvas, null).getPropertyValue('height');
 
 function random(min, max) {
   return Math.floor((Math.random() * max) + min);
