@@ -47,5 +47,9 @@ function draw() {
   }
 }
 
-populateRain();
-setInterval(draw, 10);
+function start() {
+  populateRain();
+  setInterval(draw, 10);
+}
+
+start();
