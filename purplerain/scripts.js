@@ -11,7 +11,7 @@ function Raindrop() {
   this.x = random(0, canvas.width),
   this.y = random(-20, -200),
   this.length = random(1, 3),
-  this.width = 0.33,
+  this.width = 1/500*canvas.width,
   this.speed = random(4, 10)
 }
 
