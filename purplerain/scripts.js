@@ -4,7 +4,7 @@ var drops = [];
 var numberOfRaindrops = 500;
 var dropColor = "#8a2be2";
 var backgroundColor = "#e6e6fa";
-var motionBlurAmount = 0.1;
+var motionBlurAmount = 0.2;
 var backgroundOpacity = 1 - motionBlurAmount;
 
 canvas.width = 900;
