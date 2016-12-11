@@ -2,7 +2,6 @@ var canvas = document.getElementById("sky");
 var ctx = canvas.getContext("2d");
 var drops = [];
 var numberOfRaindrops = 500;
-var gravity = 0.05;
 var dropColor = "#8a2be2";
 
 canvas.width = 900;
@@ -21,9 +20,10 @@ function Raindrop() {
   this.x = random(0, canvas.width),
   this.y = random(-20, -500),
   this.z = random(0, 20),
-  this.length = map(z, 0, 20, 8, 13),
-  this.width = map(z, 0, 20, 2, 3),
-  this.speed = map(z, 0, 20, 2, 5)
+  this.length = map(this.z, 0, 20, 8, 13),
+  this.width = map(this.z, 0, 20, 2, 3),
+  this.speed = map(this.z, 0, 20, 1, 6),
+  this.gravity = map(this.z, 0, 20, 0.001, 0.05)
 }
 
 function populateRain() {
