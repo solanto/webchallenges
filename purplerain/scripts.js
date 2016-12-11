@@ -23,6 +23,7 @@ function populateRain() {
 
 function fall() {
   drops[i].y += drops[i].speed
+  drops[i].speed += 0.05
 }
 
 function show() {
