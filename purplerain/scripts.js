@@ -12,7 +12,7 @@ function Raindrop() {
   this.y = random(-20, -500),
   this.length = random(2, 4),
   this.width = 1/500*canvas.width,
-  this.speed = random(4, 10)
+  this.speed = random(2, 5)
 }
 
 function populateRain() {
