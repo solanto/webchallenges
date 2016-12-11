@@ -4,7 +4,8 @@ var drops = [];
 var numberOfRaindrops = 500;
 var dropColor = "#8a2be2";
 var backgroundColor = "#e6e6fa";
-var motionBlurAmount = 0.95;
+var motionBlurAmount = 0.1;
+var backgroundOpacity = 1 - motionBlurAmount;
 
 canvas.width = 900;
 canvas.height = 500;
@@ -50,7 +51,7 @@ function showDrop() {
 }
 
 function clearFrameWithMotionBlur() {
-  ctx.globalAlpha = motionBlurAmount;
+  ctx.globalAlpha = backgroundOpacity;
   ctx.fillStyle = backgroundColor;
   ctx.fillRect(0, 0, canvas.width, canvas.height);
   ctx.globalAlpha = 1;
