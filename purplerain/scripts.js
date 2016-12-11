@@ -20,9 +20,9 @@ function Raindrop() {
   this.x = random(0, canvas.width),
   this.y = random(-20, -500),
   this.z = random(0, 20),
-  this.length = map(this.z, 0, 20, 8, 13),
-  this.width = map(this.z, 0, 20, 2, 3),
-  this.speed = map(this.z, 0, 20, 1, 6),
+  this.length = random(map(this.z, 0, 20, 7, 13), map(this.z, 0, 20, 8, 14)),
+  this.width = random(map(this.z, 0, 20, 1, 3), map(this.z, 0, 20, 2, 4)),
+  this.speed = random(map(this.z, 0, 20, 3, 8), map(this.z, 0, 20, 4, 9)),
   this.gravity = map(this.z, 0, 20, 0.001, 0.05)
 }
 
