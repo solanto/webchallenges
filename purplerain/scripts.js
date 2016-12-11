@@ -10,15 +10,20 @@ canvas.height = 500;
 ctx.fillStyle = dropColor;
 
 function random(min, max) {
-	return Math.floor((Math.random() * max) + min);
+  return Math.floor((Math.random() * max) + min);
+}
+
+function map(value, vmin, vmax, min, max) {
+  return min + (max - min) * ((value - vmin) / (vmax - vmin));
 }
 
 function Raindrop() {
   this.x = random(0, canvas.width),
   this.y = random(-20, -500),
-  this.length = random(8, 13),
-  this.width = 3,
-  this.speed = random(2, 5)
+  this.z = random(0, 20),
+  this.length = map(z, 0, 20, 8, 13),
+  this.width = map(z, 0, 20, 2, 3),
+  this.speed = map(z, 0, 20, 2, 5)
 }
 
 function populateRain() {
