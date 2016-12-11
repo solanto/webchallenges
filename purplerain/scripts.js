@@ -34,7 +34,7 @@ function populateRain() {
 
 function dropFall() {
   drops[i].y += drops[i].speed;
-  drops[i].speed += gravity;
+  drops[i].speed += drops[i].gravity;
   if(drops[i].y > canvas.height) {
     drops[i] = new Raindrop;
   }
