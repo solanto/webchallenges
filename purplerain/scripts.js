@@ -12,8 +12,8 @@ function random(min, max) {
 function Raindrop() {
   this.x = random(0, canvas.width),
   this.y = random(-20, -500),
-  this.length = random(3, 5),
-  this.width = 1,
+  this.length = random(5, 8),
+  this.width = 2,
   this.speed = random(2, 5)
 }
 
