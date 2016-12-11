@@ -25,8 +25,7 @@ function fall() {
   drops[i].y += drops[i].speed
   drops[i].speed += 0.05
   if(drops[i].y > canvas.height) {
-    drops[i].y = random(-20, -200);
-    drops[i].speed = random(4, 10);
+    drops[i] = new Raindrop;
   }
 }
 
