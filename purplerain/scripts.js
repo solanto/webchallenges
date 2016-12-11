@@ -1,7 +1,7 @@
 var canvas = document.getElementById("sky");
 var ctx = canvas.getContext("2d");
 var drops = [];
-var numberOfRaindrops = 100;
+var numberOfRaindrops = 500;
 
 function random(min, max) {
 	return Math.floor((Math.random() * max) + min);
@@ -10,8 +10,8 @@ function random(min, max) {
 function Raindrop() {
   this.x = random(0, canvas.width),
   this.y = random(-20, -200),
-  this.length = random(4, 20),
-  this.width = 2.25,
+  this.length = random(1, 5),
+  this.width = 0.25,
   this.speed = random(4, 10)
 }
 
