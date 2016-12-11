@@ -7,3 +7,8 @@ var raindrop = {
   width: 2.5,
   speed: 1
 }
+
+function fall() {
+  raindrop.y += raindrop.speed
+}
+
