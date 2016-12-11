@@ -17,6 +17,13 @@ function populateRain() {
   }
 }
 
+function draw() {
+  for (i = 0; i < numberOfRaindrops; i++) { 
+    fall();
+    show();
+  }
+}
+
 function fall() {
   drops[i].y += Raindrop.speed
 }
@@ -27,13 +34,6 @@ function show() {
   ctx.fillStyle = "#d829ff";
   ctx.fill();
   ctx.closePath();
-}
-
-function draw() {
-  for (i = 0; i < numberOfRaindrops; i++) { 
-    fall();
-    show();
-  }
 }
 
 setInterval(draw, 10);
