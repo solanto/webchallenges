@@ -2,8 +2,8 @@ var canvas = document.getElementById("sky");
 var ctx = canvas.getContext("2d");
 var drops = [];
 var numberOfRaindrops = 500;
-canvas.width = 9000;
-canvas.height = 5000;
+canvas.width = 900;
+canvas.height = 500;
 
 function random(min, max) {
 	return Math.floor((Math.random() * max) + min);
