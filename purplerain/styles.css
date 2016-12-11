@@ -1,8 +1,9 @@
 figure {
   width: 900px;
   height: 500px;
-  border-radius: 10%;
+  border-radius: 1%;
   overflow: hidden;
+  z-index: 10;
 }
 
 canvas {
