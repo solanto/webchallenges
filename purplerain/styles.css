@@ -1,12 +1,12 @@
 #canvas_container {
-    background: #fff;
-    border: 1px solid #aaa;
-    border-radius: 15px;
-    height: 515px;
-    margin: 20px 20px;
-    overflow: hidden;
-    width: 690px;
-    -webkit-mask-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAIAAACQd1PeAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAA5JREFUeNpiYGBgAAgwAAAEAAGbA+oJAAAAAElFTkSuQmCC);
+  background: #fff;
+  border: 0px;
+  border-radius: 5px;
+  height: 500px;
+  margin: 20px 20px;
+  overflow: hidden;
+  width: 900px;
+  -webkit-mask-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAIAAACQd1PeAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAA5JREFUeNpiYGBgAAgwAAAEAAGbA+oJAAAAAElFTkSuQmCC);
 }
 
 canvas {
