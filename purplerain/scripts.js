@@ -36,4 +36,5 @@ function draw() {
   }
 }
 
+populateRain();
 setInterval(draw, 10);
