@@ -5,13 +5,14 @@ canvas.width = canvasWidthFromCSS.substring(0, canvasWidthFromCSS.length - 2);
 var canvasHeightFromCSS = window.getComputedStyle(canvas, null).getPropertyValue('height');
 canvas.height = canvasHeightFromCSS.substring(0, canvasHeightFromCSS.length - 2);
 var pixels = []
+var metaPoints
 
 function random(min, max) {
   return Math.floor((Math.random() * max) + min);
 }
 
 function Pixel() {
-  this.color = "rgb(255, 255, 255)";
+  this.color = "rgb(random(0, 255), random(0, 255), random(0, 255))";
 }
 
 function makePixels() {
@@ -48,6 +49,7 @@ function draw() {
 function start() {
   makePixels();
   setInterval(draw, 20);
+  var metaPoints
 }
 
 start();
