@@ -7,8 +7,6 @@ canvas.height = canvasHeightFromCSS.substring(0, canvasHeightFromCSS.length - 2)
 var pixels = []
 
 function Pixel() {
-  this.x = x
-  this.y = y
   this.color = rgb(255, 255, 255)
 }
 
