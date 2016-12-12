@@ -7,7 +7,6 @@ canvas.height = canvasHeightFromCSS.substring(0, canvasHeightFromCSS.length - 2)
 var metaPoints = [];
 var pi = Math.PI
 var tau = 2 * pi
-ctx.fillStyle = "#000000";
 
 function Mouse() {
   this.x;
@@ -50,11 +49,13 @@ function MetaPoint() {
 
 function draw() {
   ctx.clearRect(0, 0, canvas.width, canvas.height);
-  metaPoints[1] = new MetaPoint;
+  metaPoints[1].x = Mouse.x
+  metaPoints[1].y = Mouse.y
   drawCircle(MetaPoint.x, MetaPoint.y, 10);
 }
 
 function start() {
+  metaPoints[1] = new MetaPoint;
   listenForMouseMove();
   setInterval(draw, 10);
 }
