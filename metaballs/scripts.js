@@ -15,7 +15,7 @@ function Pixel() {
 function makePixels() {
   for(x = 0; x < width; x++){
     for(y = 0; y < width; y++){
-      
+      pixels[x + y * canvas.width] = new Pixel
     }
   }
 }
