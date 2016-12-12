@@ -28,7 +28,7 @@ function draw() {
 }
 
 function start() {
-  var metaPoints[1] = new MetaPoint;
+  metaPoints[1] = new MetaPoint;
   setInterval(draw, 10);
 }
 
