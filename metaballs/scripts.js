@@ -48,7 +48,7 @@ function MetaPoint() {
 }
 
 function draw() {
-  //ctx.clearRect(0, 0, canvas.width, canvas.height);
+  ctx.clearRect(0, 0, canvas.width, canvas.height);
   metaPoints[1].x = Mouse.x
   metaPoints[1].y = Mouse.y
   drawCircle(MetaPoint.x, MetaPoint.y, 10);
