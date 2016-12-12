@@ -13,9 +13,9 @@ function random(min, max) {
 
 function Pixel() {
   function Color() {
-    this.r = random(0, 255),
-    this.g = random(0, 255),
-    this.b = random(0, 255)
+    this.r = random(0, 255);
+    this.g = random(0, 255);
+    this.b = random(0, 255);
   }
 }
 
