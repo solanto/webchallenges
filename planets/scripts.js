@@ -101,6 +101,7 @@ function drawPlanets() {
 }
 
 function draw() {
+  clearFrameWithMotionBlur();
   updatePlanets();
   drawPlanets();
 }
