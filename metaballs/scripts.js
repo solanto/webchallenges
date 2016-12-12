@@ -7,25 +7,12 @@ canvas.height = canvasHeightFromCSS.substring(0, canvasHeightFromCSS.length - 2)
 var metaPoints = [];
 var pi = Math.PI;
 var tau = 2 * pi;
-var quadraticPoints = [];
-quadraticPoints[0] = new pointArray;
-quadraticPoints[1] = new pointArray;
-quadraticPoints[2] = new pointArray;
-quadraticPoints[0].x = 50;
-quadraticPoints[0].y = 50;
-quadraticPoints[1].x = 100;
-quadraticPoints[1].y = 80;
-quadraticPoints[2].x = 110;
-quadraticPoints[2].y = 120;
+var mouse = new Point;
+metaPoints[1] = new Point;
 
-function pointArray () {
+function Point () {
   this.x
   this.y
-}
-
-function Mouse() {
-  this.x;
-  this.y;
 }
 
 function random(min, max) {
@@ -45,8 +32,8 @@ function getMousePos(canvas, evt) {
 function listenForMouseMove() {
   canvas.addEventListener('mousemove', function(evt) {
     var mousePos = getMousePos(canvas, evt);
-    Mouse.x = mousePos.x;
-    Mouse.y = mousePos.y;
+    mouse.x = mousePos.x;
+    mouse.y = mousePos.y;
   }, false);
 }
 
@@ -57,31 +44,20 @@ function drawCircle(x, y, r) {
   ctx.fill();
 }
 
-function drawQuadraticCurve(array) {
-  ctx.moveTo(array[0].x, array[0].y);
-  for (i = 1; i < array.length - 2; i ++) {
-    var xc = (array[i].x + array[i + 1].x) / 2;
-    var yc = (array[i].y + array[i + 1].y) / 2;
-    ctx.quadraticCurveTo(array[i].x, array[i].y, xc, yc);
-   }
-   ctx.quadraticCurveTo(array[i].x, array[i].y, array[i+1].x, array[i+1].y);
-}
+function taperBetweenCircles() {
 
-function MetaPoint() {
-  this.x = Mouse.x;
-  this.y = Mouse.y;
 }
 
 function draw() {
-  //ctx.clearRect(0, 0, canvas.width, canvas.height);
-  metaPoints[1].x = Mouse.x
-  metaPoints[1].y = Mouse.y
-  drawCircle(metaPoints[1].x, metaPoints[1].y, 10);
-  drawQuadraticCurve(quadraticPoints);
+  ctx.clearRect(0, 0, canvas.width, canvas.height);
+  metaPoints[1].x = mouse.x
+  metaPoints[1].y = mouse.y
+  for (i = 0; i < metaPoints.length; i++) {
+    drawCircle(metaPoints[i].x, metaPoints[i].y, 100);
+  }
 }
 
 function start() {
-  metaPoints[1] = new MetaPoint;
   listenForMouseMove();
   setInterval(draw, 10);
 }
