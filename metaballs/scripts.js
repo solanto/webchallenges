@@ -6,6 +6,16 @@ var canvasHeightFromCSS = window.getComputedStyle(canvas, null).getPropertyValue
 canvas.height = canvasHeightFromCSS.substring(0, canvasHeightFromCSS.length - 2);
 var metaPoints = [];
 
+function getMousePos(canvas, evt) {
+    var rect = canvas.getBoundingClientRect(), root = document.documentElement;
+    var mouseX = evt.clientX - rect.left - root.scrollLeft;
+    var mouseY = evt.clientY - rect.top - root.scrollTop;
+    return {
+      x: mouseX,
+      y: mouseY
+    };
+}
+
 function MetaPoint() {
   this.x = random(0, canvas.width);
   this.y = random(0, canvas.height);
@@ -18,6 +28,11 @@ function draw() {
 function start() {
   var metaPoints[1] = new MetaPoint;
   setInterval(draw, 10);
+  canvas.addEventListener('mousemove', function(evt) {
+    var mousePos = getMousePos(canvas, evt);
+    var message = "Mouse position: " + mousePos.x + "," + mousePos.y;
+    alert(message);
+  }, false);
 }
 
 start();
