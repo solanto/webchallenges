@@ -12,19 +12,19 @@ var pi = Math.PI;
 var tau = 2 * pi
 
 function Planet() {
-  this.x;
-  this.y;
   this.radius;
   this.distance;
   this.angle = random(0, tau);
-  this.speed;
+  this.speed = random(0.1, 0.3);
   this.planets = [];
 }
 
 Planet.prototype.spawnPlanets = function(num) {
   for (i = 0; i < num; i++) {
     this.planets[i] = new Planet;
-    console.log(this.planets[i].angle);
+    this.planets[i].radius = random(0.4 * this.radius, 0.7 * this.radius);
+    this.planets[i].distance = random(0.2 * this.distance, 0.5 * this.distance);
+    
   }
 };
 
