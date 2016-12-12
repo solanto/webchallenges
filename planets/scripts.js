@@ -11,9 +11,11 @@ canvas.height = canvasHeightFromCSS.substring(0, canvasHeightFromCSS.length - 2)
 var pi = Math.PI;
 var tau = 2 * pi
 
-function Planet() {
-  this.radius;
-  this.distance;
+function Planet(x, y, radius) {
+  this.x = x;
+  this.y = y;
+  this.radius = radius;
+  this.distance = 0;
   this.angle = random(0, tau);
   this.speed = random(0.1, 0.3);
   this.planets = [];
@@ -50,6 +52,10 @@ function clearFrameWithMotionBlur() {
   ctx.fillStyle = backgroundColor;
   ctx.fillRect(0, 0, canvas.width, canvas.height);
   ctx.globalAlpha = 1;
+}
+
+function updatePlanets() {
+  
 }
 
 function draw() {
