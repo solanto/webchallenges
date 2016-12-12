@@ -7,7 +7,7 @@ canvas.height = canvasHeightFromCSS.substring(0, canvasHeightFromCSS.length - 2)
 var pixels = []
 
 function Pixel() {
-  this.color = /*rgb(255, 255, 255)*/ rgb(0, 0, 0);
+  this.color = /*rgb(255, 255, 255)*/ "rgb(0, 0, 0)";
 }
 
 function makePixels() {
@@ -19,7 +19,7 @@ function makePixels() {
 }
 
 function setPixelColor(x, y, r, g, b) {
-  pixels[x + y * canvas.width].color = rgb(r, g, b);
+  pixels[x + y * canvas.width].color = "rgb("+ r +", "+ g +", "+ b +")";
 }
 
 function draw() {
