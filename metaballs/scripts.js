@@ -7,6 +7,7 @@ canvas.height = canvasHeightFromCSS.substring(0, canvasHeightFromCSS.length - 2)
 var metaPoints = [];
 var pi = Math.PI
 var tau = 2 * pi
+ctx.fillStyle = "#000000";
 
 function Mouse() {
   this.x;
