@@ -53,8 +53,8 @@ function taperBetweenCircles() {
 
 function draw() {
   ctx.clearRect(0, 0, canvas.width, canvas.height);
-  metaPoints[1].x = mouse.x
-  metaPoints[1].y = mouse.y
+  metaPoints[0].x = mouse.x
+  metaPoints[0].y = mouse.y
   for (i = 0; i < metaPoints.length; i++) {
     drawCircle(metaPoints[i].x, metaPoints[i].y, 100);
   }
