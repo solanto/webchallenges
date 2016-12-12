@@ -1,3 +1,7 @@
+var metaBallSize = 100;
+metaPoints[1].x = 100;
+metaPoints[1].y = 100;
+
 var canvas = document.getElementById("canvas");
 var ctx = canvas.getContext("2d");
 var canvasWidthFromCSS = window.getComputedStyle(canvas, null).getPropertyValue('width');
@@ -10,8 +14,6 @@ var tau = 2 * pi;
 var mouse = new Point;
 metaPoints[0] = new Point;
 metaPoints[1] = new Point;
-metaPoints[1].x = 100;
-metaPoints[1].y = 100;
 
 function Point () {
   this.x
@@ -48,7 +50,13 @@ function drawCircle(x, y, r) {
 }
 
 function taperBetweenCircles() {
-
+  for (i = 0; i < metaPoints.length; i++) {
+    for (a = 0; a < metaPoints.length; a++) {
+      if (a !== i) {
+        
+      }
+    }
+  }
 }
 
 function draw() {
@@ -56,7 +64,7 @@ function draw() {
   metaPoints[0].x = mouse.x
   metaPoints[0].y = mouse.y
   for (i = 0; i < metaPoints.length; i++) {
-    drawCircle(metaPoints[i].x, metaPoints[i].y, 100);
+    drawCircle(metaPoints[i].x, metaPoints[i].y, metaBallSize);
   }
 }
 
