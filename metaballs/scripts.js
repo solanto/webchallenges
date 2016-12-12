@@ -8,7 +8,10 @@ var metaPoints = [];
 var pi = Math.PI;
 var tau = 2 * pi;
 var mouse = new Point;
+metaPoints[0] = new Point;
 metaPoints[1] = new Point;
+metaPoints[1].x = 100;
+metaPoints[1].y = 100;
 
 function Point () {
   this.x
