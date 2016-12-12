@@ -17,9 +17,9 @@ function getMousePos(canvas, evt) {
     y: evt.clientY - rect.top
   };
 }
+
 canvas.addEventListener('mousemove', function(evt) {
   var mousePos = getMousePos(canvas, evt);
-  console.log('Mouse position: ' + mousePos.x + ',' + mousePos.y);
 }, false);
 
 function MetaPoint() {
