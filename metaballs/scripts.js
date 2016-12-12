@@ -26,7 +26,7 @@ function draw() {
 }
 
 function start() {
-  var metaPoints[1] = new MetaPoint;
+  metaPoints[1] = new MetaPoint;
   setInterval(draw, 10);
   canvas.addEventListener('mousemove', function(evt) {
     var mousePos = getMousePos(canvas, evt);
