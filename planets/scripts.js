@@ -38,6 +38,7 @@ Planet.prototype.update = function() {
     if (this.planets[i] !== null) {
       var point = pointOnCircle(this.x, this.y, this.planets[i].distance, this.planets[i].angle);
       this.planets[i].x = point.x;
+      this.planets[i].y = point.y
     }
   }
 };
