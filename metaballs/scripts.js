@@ -24,6 +24,10 @@ function random(min, max) {
   return Math.floor((Math.random() * max) + min);
 }
 
+function distanceBetweenPoints(x1, y1, x2, y2) {
+  return Math.sqrt(Math.pow((x2 - x1), 2) + Math.pow((y2 - y1), 2))
+}
+
 function getMousePos(canvas, evt) {
     var rect = canvas.getBoundingClientRect(), root = document.documentElement;
     var mouseX = evt.clientX - rect.left - root.scrollLeft;
