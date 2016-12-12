@@ -107,7 +107,7 @@ function draw() {
 }
 
 function setup() {
-  ctx.translate(canvas.width, canvas.height);
+  ctx.translate(canvas.width / 2, canvas.height / 2);
   sun = new Planet(0, 0, 50);
   sun.spawnPlanets(4);
   sun.planets[0].spawnPlanets(2);
