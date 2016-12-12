@@ -27,6 +27,8 @@ function drawPixel(x, y) {
   ctx.fillRect(x, y, 1, 1);
 }
 
+function 
+
 function draw() {
   ctx.clearRect(0, 0, canvas.width, canvas.height);
   for(x = 0; x < canvas.width; x++){
