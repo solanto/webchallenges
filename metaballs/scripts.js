@@ -8,9 +8,15 @@ var metaPoints = [];
 var pi = Math.PI;
 var tau = 2 * pi;
 var quadraticPoints = [];
+quadraticPoints[0] = new pointArray;
 quadraticPoints[1] = new pointArray;
 quadraticPoints[2] = new pointArray;
-quadraticPoints[3] = new pointArray;
+quadraticPoints[0].x = 50;
+quadraticPoints[0].y = 50;
+quadraticPoints[1].x = 100;
+quadraticPoints[1].y = 80;
+quadraticPoints[2].x = 110;
+quadraticPoints[2].y = 120;
 
 function pointArray () {
   this.x
@@ -71,7 +77,7 @@ function draw() {
   metaPoints[1].x = Mouse.x
   metaPoints[1].y = Mouse.y
   drawCircle(metaPoints[1].x, metaPoints[1].y, 10);
-  
+  drawQuadraticCurve(quadraticPoints);
 }
 
 function start() {
