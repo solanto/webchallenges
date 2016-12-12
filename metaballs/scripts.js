@@ -42,6 +42,16 @@ function drawCircle(x, y, r) {
   ctx.fill();
 }
 
+function drawQuadraticCurve(array) {
+  ctx.moveTo(array[0].x, array[0].y);
+  for (i = 1; i < array.length - 2; i ++) {
+    var xc = (array[i].x + array[i + 1].x) / 2;
+    var yc = (array[i].y + array[i + 1].y) / 2;
+    ctx.quadraticCurveTo(array[i].x, array[i].y, xc, yc);
+   }
+   ctx.quadraticCurveTo(array[i].x, array[i].y, array[i+1].x, array[i+1].y);
+}
+
 function MetaPoint() {
   this.x = Mouse.x;
   this.y = Mouse.y;
