@@ -31,6 +31,21 @@ Planet.prototype.spawnPlanets = function(num) {
   }
 };
 
+Planet.prototype.update = function() {
+  for (i = 0; i < this.planets.length; i++) {
+    this.planets[i].x = pointOnCircle(this.x, this.y, this.planets[i].distance, this.planets[i].angle);
+  }
+};
+
+Planet.prototype.updateChildren = function() {
+  for (i = 0; i < this.planets.length; i++) {
+    this.planets[i].update
+    if (this.planets[i] !== null) {
+      this.planets[i].updateChildren
+    }
+  }
+};
+
 Planet.prototype.draw = function() {
   drawPlanet(this.x, this.y, this.radius, this.color);
 };
@@ -71,12 +86,17 @@ function drawPlanet(x, y, radius, color) {
   ctx.fill();
 }
 
+function updatePlanets() {
+  sun.updateChildren();
+}
+
 function drawPlanets() {
   sun.draw();
-  sun.drawcChildren();
+  sun.drawChildren();
 }
 
 function draw() {
+  updatePlanets();
   drawPlanets();
 }
 
