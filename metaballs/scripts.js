@@ -7,7 +7,7 @@ canvas.height = canvasHeightFromCSS.substring(0, canvasHeightFromCSS.length - 2)
 var pixels = []
 
 function Pixel() {
-  this.color = /*rgb(255, 255, 255)*/ "black";
+  this.color = /*rgb(255, 255, 255)*/ rgb(0, 0, 0);
 }
 
 function makePixels() {
