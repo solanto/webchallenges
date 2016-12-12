@@ -20,12 +20,21 @@ function clearFrameWithMotionBlur() {
   ctx.globalAlpha = 1;
 }
 
+function Planet() {
+  this.x;
+  this.y;
+  this.radius;
+  this.distance;
+  this.angle;
+  this.speed;
+}
+
 function draw() {
   
 }
 
-function start() {
+function setup() {
   
 }
 
-start();
+setup();
