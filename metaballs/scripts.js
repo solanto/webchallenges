@@ -27,9 +27,9 @@ function makePixels() {
 }
 
 function setPixelColor(x, y, r, g, b) {
-  pixels[x + y * canvas.width].Color.r = r;
-  pixels[x + y * canvas.width].Color.g = g;
-  pixels[x + y * canvas.width].Color.b = b;
+  pixels[x + y * canvas.width].colorR = r;
+  pixels[x + y * canvas.width].colorG = g;
+  pixels[x + y * canvas.width].colorB = b;
 }
 
 function drawPixel(x, y) {
