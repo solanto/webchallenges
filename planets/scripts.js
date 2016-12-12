@@ -44,9 +44,11 @@ Planet.prototype.update = function() {
 
 Planet.prototype.updateChildren = function() {
   for (i = 0; i < this.planets.length; i++) {
-    this.planets[i].update
-    if (this.planets[i] !== null) {
-      this.planets[i].updateChildren
+    for (a = 0; a < this.planets[i].planets.length; a++) {
+      this.planets[i].planets[a].update
+      if (this.planets[i].planets[a] !== null) {
+        this.planets[i].planets[a].updateChildren
+      }
     }
   }
 };
