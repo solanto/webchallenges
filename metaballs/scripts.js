@@ -38,7 +38,7 @@ function draw() {
 
 function start() {
   makePixels();
-  setInterval(draw, 10);
+  setInterval(draw, 20);
 }
 
 start();
