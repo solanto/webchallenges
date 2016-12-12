@@ -107,8 +107,9 @@ function draw() {
 }
 
 function setup() {
-  setInterval(draw, 10);
+  ctx.translate(canvas.width, canvas.height);
   sun = new Planet(0, 0, 50);
+  setInterval(draw, 10);
 }
 
 setup();
