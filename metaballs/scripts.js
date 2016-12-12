@@ -34,16 +34,16 @@ function listenForMouseMove() {
 }
 
 function MetaPoint() {
-  this.x = random(0, canvas.width);
-  this.y = random(0, canvas.height);
+  this.x = Mouse.x;
+  this.y = Mouse.y;
 }
 
 function draw() {
   ctx.clearRect(0, 0, canvas.width, canvas.height);
+  metaPoints[1] = new MetaPoint;
 }
 
 function start() {
-  metaPoints[1] = new MetaPoint;
   listenForMouseMove();
   setInterval(draw, 10);
 }
