@@ -28,6 +28,10 @@ Planet.prototype.spawnPlanets = function(num) {
   }
 };
 
+Planet.prototype.draw = function() {
+  
+};
+
 function random(min, max) {
   return Math.floor((Math.random() * max) + min);
 }
