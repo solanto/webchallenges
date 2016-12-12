@@ -48,7 +48,7 @@ function draw() {
 
 function start() {
   makePixels();
-  setInterval(draw, 20);
+  setInterval(draw, 100);
   var metaPoints
 }
 
