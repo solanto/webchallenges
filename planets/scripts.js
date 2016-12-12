@@ -19,13 +19,14 @@ function Planet() {
   this.angle = random(0, tau);
   this.speed;
   this.planets = [];
-  function spawnPlanets(num) {
-    for (i = 0; i < num; i++) {
-      this.planets[i] = new Planet;
-      console.log(this.planets[i].angle);
-    }
-  }
 }
+
+Planet.prototype.spawnPlanets = function(num) {
+  for (i = 0; i < num; i++) {
+    this.planets[i] = new Planet;
+    console.log(this.planets[i].angle);
+  }
+};
 
 function random(min, max) {
   return Math.floor((Math.random() * max) + min);
