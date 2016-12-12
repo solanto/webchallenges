@@ -18,6 +18,7 @@ function Planet(x, y, radius) {
   this.distance = 0;
   this.angle = random(0, tau);
   this.speed = random(0.1, 0.3);
+  this.color = "white";
   this.planets = [];
 }
 
@@ -31,7 +32,7 @@ Planet.prototype.spawnPlanets = function(num) {
 };
 
 Planet.prototype.draw = function() {
-  
+  drawPlanet(this.x, this.y, this.radius, this.color);
 };
 
 function random(min, max) {
@@ -54,16 +55,24 @@ function clearFrameWithMotionBlur() {
   ctx.globalAlpha = 1;
 }
 
+function drawPlanet(x, y, radius, color) {
+  ctx.fillStyle = color;
+  ctx.beginPath();
+  ctx.arc(x, y, radius, 0, tau);
+  ctx.fill();
+}
+
 function updatePlanets() {
   
 }
 
 function draw() {
-  
+  draw
 }
 
 function setup() {
   setInterval(draw, 10);
+  var sun = new Planet(0, 0, 50);
 }
 
 setup();
