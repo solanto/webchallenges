@@ -6,8 +6,18 @@ var canvasHeightFromCSS = window.getComputedStyle(canvas, null).getPropertyValue
 canvas.height = canvasHeightFromCSS.substring(0, canvasHeightFromCSS.length - 2);
 var pixels = []
 
+function Pixel() {
+  this.x = x
+  this.y = y
+  this.color = rgb(255, 255, 255)
+}
+
 function makePixels() {
-  
+  for(x = 0; x < width; x++){
+    for(y = 0; y < width; y++){
+      
+    }
+  }
 }
 
 function draw() {
