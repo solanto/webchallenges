@@ -22,6 +22,10 @@ function setPixelColor(x, y, r, g, b) {
   pixels[x + y * canvas.width].color = "rgb("+ r +", "+ g +", "+ b +")";
 }
 
+function drawPixel(x, y) {
+  ctx.fillRect(x, y, 1, 1);
+}
+
 function draw() {
   ctx.clearRect(0, 0, canvas.width, canvas.height);
 }
