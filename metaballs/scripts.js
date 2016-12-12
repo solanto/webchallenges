@@ -6,6 +6,10 @@ var canvasHeightFromCSS = window.getComputedStyle(canvas, null).getPropertyValue
 canvas.height = canvasHeightFromCSS.substring(0, canvasHeightFromCSS.length - 2);
 var metaPoints = [];
 
+function random(min, max) {
+  return Math.floor((Math.random() * max) + min);
+}
+
 function getMousePos(canvas, evt) {
   var rect = canvas.getBoundingClientRect();
   return {
