@@ -23,11 +23,13 @@ function setPixelColor(x, y, r, g, b) {
 }
 
 function drawPixel(x, y) {
+  ctx.fillStyle = pixels[x + y * canvas.width].color
   ctx.fillRect(x, y, 1, 1);
 }
 
 function draw() {
   ctx.clearRect(0, 0, canvas.width, canvas.height);
+  for 
 }
 
 function start() {
