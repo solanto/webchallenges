@@ -13,8 +13,8 @@ function random(min, max) {
 
 function Pixel() {
     this.colorR = random(0, 255);
-    this.colorG = (0, 255);
-    this.colorB = (0, 255);
+    this.colorG = random(0, 255);
+    this.colorB = random(0, 255);
 }
 
 function makePixels() {
