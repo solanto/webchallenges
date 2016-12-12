@@ -5,6 +5,7 @@ canvas.width = canvasWidthFromCSS.substring(0, canvasWidthFromCSS.length - 2);
 var canvasHeightFromCSS = window.getComputedStyle(canvas, null).getPropertyValue('height');
 canvas.height = canvasHeightFromCSS.substring(0, canvasHeightFromCSS.length - 2);
 var metaPoints = [];
+var mousePos;
 
 function random(min, max) {
   return Math.floor((Math.random() * max) + min);
@@ -23,7 +24,7 @@ canvas.addEventListener('mousemove', function(evt) {
 }, false);
 
 function MetaPoint() {
-  this.x = random(0, canvas.width);
+  this.x = mousePos.x;
   this.y = random(0, canvas.height);
 }
 
