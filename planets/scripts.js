@@ -109,6 +109,9 @@ function draw() {
 function setup() {
   ctx.translate(canvas.width, canvas.height);
   sun = new Planet(0, 0, 50);
+  sun.spawnPlanets(4);
+  sun.planets[0].spawnPlanets(2);
+  sun.planets[1].spawnPlanets(1);
   setInterval(draw, 10);
 }
 
