@@ -12,11 +12,11 @@ function random(min, max) {
 }
 
 function Pixel() {
-  function Color() {
-    this.r = random(0, 255);
-    this.g = random(0, 255);
-    this.b = random(0, 255);
-  }
+  var color = [
+    random(0, 255),
+    random(0, 255),
+    random(0, 255)
+  ]
 }
 
 function makePixels() {
@@ -34,7 +34,7 @@ function setPixelColor(x, y, r, g, b) {
 }
 
 function drawPixel(x, y) {
-  ctx.fillStyle = "rgb(" + pixels[x + y * canvas.width].Color.r + ", " + pixels[x + y * canvas.width].Color.g + ", " + pixels[x + y * canvas.width].Color.b + ")"
+  ctx.fillStyle = "rgb(" + pixels[x + y * canvas.width].color[0] + ", " + pixels[x + y * canvas.width].color[1] + ", " + pixels[x + y * canvas.width].color[2] + ")"
   ctx.fillRect(x, y, 1, 1);
 }
 
