@@ -18,6 +18,7 @@ function Planet() {
   this.distance;
   this.angle = random(0, tau);
   this.speed;
+  this.planets[];
 }
 
 function random(min, max) {
