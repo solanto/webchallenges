@@ -35,6 +35,15 @@ Planet.prototype.draw = function() {
   drawPlanet(this.x, this.y, this.radius, this.color);
 };
 
+Planet.prototype.drawChildren = function() {
+  for (i = 0; i < this.planets.length; i++) {
+    this.planets[i].draw
+    if (this.planets[i] !== null) {
+      this.planets[i].drawChildren
+    }
+  }
+};
+
 function random(min, max) {
   return Math.floor((Math.random() * max) + min);
 }
@@ -62,12 +71,13 @@ function drawPlanet(x, y, radius, color) {
   ctx.fill();
 }
 
-function updatePlanets() {
-  
+function drawPlanets() {
+  sun.draw();
+  sun.drawcChildren();
 }
 
 function draw() {
-  draw
+  drawPlanets();
 }
 
 function setup() {
