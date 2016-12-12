@@ -29,7 +29,11 @@ function drawPixel(x, y) {
 
 function draw() {
   ctx.clearRect(0, 0, canvas.width, canvas.height);
-  for 
+  for(x = 0; x < canvas.width; x++){
+    for(y = 0; y < canvas.height; y++){
+      drawPixel(x, y);
+    }
+  }
 }
 
 function start() {
