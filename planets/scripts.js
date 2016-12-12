@@ -41,12 +41,19 @@ function clearFrameWithMotionBlur() {
   ctx.globalAlpha = 1;
 }
 
+function spawnPlanets(num) {
+  for (i = 0; i < num; i++) {
+    this.planets[i] = new Planet;
+    console.log(this.planets[i].angle);
+  }
+}
+
 function draw() {
   
 }
 
 function setup() {
-  
+  setInterval(draw, 10);
 }
 
 setup();
