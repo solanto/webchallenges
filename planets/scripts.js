@@ -1,5 +1,7 @@
 var motionBlurAmount = 0.2;
 
+var sun;
+
 var canvas = document.getElementById("space");
 var ctx = canvas.getContext("2d");
 var backgroundOpacity = 1 - motionBlurAmount;
@@ -34,7 +36,8 @@ Planet.prototype.spawnPlanets = function(num) {
 Planet.prototype.update = function() {
   for (i = 0; i < this.planets.length; i++) {
     if (this.planets[i] !== null) {
-      this.planets[i].x = pointOnCircle(this.x, this.y, this.planets[i].distance, this.planets[i].angle);
+      var point = pointOnCircle(this.x, this.y, this.planets[i].distance, this.planets[i].angle);
+      this.planets[i].x = point.x;
     }
   }
 };
@@ -104,7 +107,7 @@ function draw() {
 
 function setup() {
   setInterval(draw, 10);
-  var sun = new Planet(0, 0, 50);
+  sun = new Planet(0, 0, 50);
 }
 
 setup();
