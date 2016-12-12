@@ -82,7 +82,7 @@ function pointOnCircle(centerX, centerY, radius, angle) {
 function clearFrameWithMotionBlur() {
   ctx.globalAlpha = backgroundOpacity;
   ctx.fillStyle = backgroundColor;
-  ctx.fillRect(canvas.width/2, canvas.height/2, canvas.width, canvas.height);
+  ctx.fillRect(-1 * canvas.width/2, -1 * canvas.height/2, canvas.width, canvas.height);
   ctx.globalAlpha = 1;
 }
 
