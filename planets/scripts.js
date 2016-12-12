@@ -33,7 +33,9 @@ Planet.prototype.spawnPlanets = function(num) {
 
 Planet.prototype.update = function() {
   for (i = 0; i < this.planets.length; i++) {
-    this.planets[i].x = pointOnCircle(this.x, this.y, this.planets[i].distance, this.planets[i].angle);
+    if (this.planets[i] !== null) {
+      this.planets[i].x = pointOnCircle(this.x, this.y, this.planets[i].distance, this.planets[i].angle);
+    }
   }
 };
 
