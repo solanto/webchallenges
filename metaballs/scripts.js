@@ -39,8 +39,8 @@ function start() {
   setInterval(draw, 10);
   canvas.addEventListener('mousemove', function(evt) {
     var mousePos = getMousePos(canvas, evt);
-    var message = "Mouse position: " + mousePos.x + "," + mousePos.y;
-    alert(message);
+    Mouse.x = mousePos.x;
+    Mouse.y = mousePos.y;
   }, false);
 }
 
