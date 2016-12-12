@@ -2,9 +2,9 @@
   background: #fff;
   border: 0px;
   border-radius: 3px;
-  height: 500px;
+  height: 250px;
   overflow: hidden;
-  width: 900px;
+  width: 450px;
   margin: 60px auto;
   -webkit-mask-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAIAAACQd1PeAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAA5JREFUeNpiYGBgAAgwAAAEAAGbA+oJAAAAAElFTkSuQmCC);
 }
