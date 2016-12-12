@@ -25,6 +25,14 @@ function getMousePos(canvas, evt) {
     };
 }
 
+function listenForMouseMove() {
+  canvas.addEventListener('mousemove', function(evt) {
+    var mousePos = getMousePos(canvas, evt);
+    Mouse.x = mousePos.x;
+    Mouse.y = mousePos.y;
+  }, false);
+}
+
 function MetaPoint() {
   this.x = random(0, canvas.width);
   this.y = random(0, canvas.height);
@@ -36,12 +44,8 @@ function draw() {
 
 function start() {
   metaPoints[1] = new MetaPoint;
+  listenForMouseMove();
   setInterval(draw, 10);
-  canvas.addEventListener('mousemove', function(evt) {
-    var mousePos = getMousePos(canvas, evt);
-    Mouse.x = mousePos.x;
-    Mouse.y = mousePos.y;
-  }, false);
 }
 
 start();
