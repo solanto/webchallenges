@@ -5,6 +5,8 @@ canvas.width = canvasWidthFromCSS.substring(0, canvasWidthFromCSS.length - 2);
 var canvasHeightFromCSS = window.getComputedStyle(canvas, null).getPropertyValue('height');
 canvas.height = canvasHeightFromCSS.substring(0, canvasHeightFromCSS.length - 2);
 var metaPoints = [];
+var pi = Math.PI
+var tau = 2 * pi
 
 function Mouse() {
   this.x;
@@ -33,6 +35,13 @@ function listenForMouseMove() {
   }, false);
 }
 
+function drawCircle(x, y, r) {
+  ctx.beginPath();
+  ctx.arc(x, y, r, 0, tau);
+  ctx.stroke();
+  ctx.fill();
+}
+
 function MetaPoint() {
   this.x = Mouse.x;
   this.y = Mouse.y;
@@ -41,6 +50,7 @@ function MetaPoint() {
 function draw() {
   ctx.clearRect(0, 0, canvas.width, canvas.height);
   metaPoints[1] = new MetaPoint;
+  drawCircle(MetaPoint.x, MetaPoint.y, 10);
 }
 
 function start() {
