@@ -15,7 +15,6 @@ function Pixel() {
     this.colorR = random(0, 255);
     this.colorG = (0, 255);
     this.colorB = (0, 255);
-  ]
 }
 
 function makePixels() {
