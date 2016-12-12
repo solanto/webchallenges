@@ -6,6 +6,10 @@ var canvasHeightFromCSS = window.getComputedStyle(canvas, null).getPropertyValue
 canvas.height = canvasHeightFromCSS.substring(0, canvasHeightFromCSS.length - 2);
 var pixels = []
 
+function random(min, max) {
+  return Math.floor((Math.random() * max) + min);
+}
+
 function Pixel() {
   this.color = "rgb(255, 255, 255)";
 }
@@ -27,7 +31,10 @@ function drawPixel(x, y) {
   ctx.fillRect(x, y, 1, 1);
 }
 
-function 
+function MetaPoint() {
+  this.x = random(0, canvas.width);
+  this.y = random(0, canvas.height);
+}
 
 function draw() {
   ctx.clearRect(0, 0, canvas.width, canvas.height);
