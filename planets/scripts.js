@@ -83,7 +83,7 @@ function clearFrameWithMotionBlur() {
   ctx.globalAlpha = backgroundOpacity;
   ctx.fillStyle = backgroundColor;
   ctx.fillRect(-1 * canvas.width/2, -1 * canvas.height/2, canvas.width, canvas.height);
-  ctx.globalAlpha = 1;
+  ctx.globalAlpha = 0.5;
 }
 
 function drawPlanet(x, y, radius, color) {
