@@ -28,7 +28,7 @@ Planet.prototype.spawnPlanets = function(num) {
   for (i = 0; i < num; i++) {
     this.planets[i] = new Planet;
     this.planets[i].radius = random(0.4 * this.radius, 0.7 * this.radius);
-    this.planets[i].distance = random(0.2 * this.distance, 0.5 * this.distance);
+    this.planets[i].distance = random(0.2 * (this.distance + 0.2), 0.5 * (this.distance + 0.5);
     
   }
 };
