@@ -74,7 +74,7 @@ function random(min, max, decimals) {
   } else {
     var integerWithDecimals = integer
     for (i = 0; i < decimals; i++) {
-      integerWithDecimals = integerWithDecimals + "" + random(0, 9);
+      integerWithDecimals = integerWithDecimals + "" + random(0, 9, false);
     }
     return integerWithDecimals;
   }
