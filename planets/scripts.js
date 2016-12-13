@@ -67,7 +67,7 @@ Planet.prototype.drawChildren = function() {
   }
 };
 
-function random(min, max, decimals) {
+/*function random(min, max, decimals) {
   var integer =  Math.floor((Math.random() * max) + min);
   if (decimals == false || integer == max) {
     return integer;
@@ -78,7 +78,7 @@ function random(min, max, decimals) {
     }
     return integerWithDecimals;
   }
-}
+}*/
 
 function pointOnCircle(centerX, centerY, radius, angle) {
   var x = centerX + radius * Math.cos(angle);
