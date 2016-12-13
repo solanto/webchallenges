@@ -76,6 +76,7 @@ function random(min, max, decimals) {
     for (i = 0; i < decimals; i++) {
       integerWithDecimals = integerWithDecimals + "" + random(0, 9);
     }
+    return integerWithDecimals;
   }
 }
 
