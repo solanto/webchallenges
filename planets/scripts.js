@@ -67,8 +67,16 @@ Planet.prototype.drawChildren = function() {
   }
 };
 
-function random(min, max) {
-  return Math.floor((Math.random() * max) + min);
+function random(min, max, decimals) {
+  var integer =  Math.floor((Math.random() * max) + min);
+  if (decimals == false || integer == max) {
+    return integer;
+  } else {
+    var integerWithDecimals = integer
+    for (i = 0; i < decimals; i++) {
+      integerWithDecimals = integerWithDecimals + "" + random(0, 9);
+    }
+  }
 }
 
 function pointOnCircle(centerX, centerY, radius, angle) {
