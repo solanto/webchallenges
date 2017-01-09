@@ -28,7 +28,7 @@ function Raindrop() {
   this.width = random(map(this.z, 0, 20, 1, 3), map(this.z, 0, 20, 2, 4)),
   this.speed = random(map(this.z, 0, 20, 3, 8), map(this.z, 0, 20, 4, 9)),
   this.gravity = map(this.z, 0, 20, 0.001, 0.05)
-  this.opacity = map(this.z, 0, 20, 0.7, 1)
+  this.opacity = map(this.z, 0, 20, 0.5, 1)
 }
 
 function populateRain() {
