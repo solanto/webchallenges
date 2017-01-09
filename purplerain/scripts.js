@@ -28,6 +28,7 @@ function Raindrop() {
   this.width = random(map(this.z, 0, 20, 1, 3), map(this.z, 0, 20, 2, 4)),
   this.speed = random(map(this.z, 0, 20, 3, 8), map(this.z, 0, 20, 4, 9)),
   this.gravity = map(this.z, 0, 20, 0.001, 0.05)
+  this.opacity = map(this.z, 0, 20, 0.7, 1)
 }
 
 function populateRain() {
@@ -45,6 +46,7 @@ function dropFall() {
 }
 
 function showDrop() {
+  cts.globalAlpha = drops[i].opacity;
   ctx.beginPath();
   ctx.rect(drops[i].x, drops[i].y, drops[i].width, drops[i].length);
   ctx.fillStyle = dropColor;
@@ -56,7 +58,6 @@ function clearFrameWithMotionBlur() {
   ctx.globalAlpha = backgroundOpacity;
   ctx.fillStyle = backgroundColor;
   ctx.fillRect(0, 0, canvas.width, canvas.height);
-  ctx.globalAlpha = 1;
 }
 
 function draw() {
