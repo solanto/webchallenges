@@ -1,6 +1,6 @@
 var motionBlurAmount = 0;
 
-var canvas = document.getElementById("sky");
+var canvas = document.getElementById("canvas");
 var ctx = canvas.getContext("2d");
 var backgroundOpacity = 1 - motionBlurAmount;
 var backgroundColor = window.getComputedStyle(canvas, null).getPropertyValue('background-color');
