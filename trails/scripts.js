@@ -24,7 +24,7 @@ function clearFrameWithMotionBlur() {
 }
 
 function start() {
-  
+  clearFrameWithMotionBlur();
 }
 
 start();
