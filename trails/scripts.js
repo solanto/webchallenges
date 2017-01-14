@@ -23,6 +23,18 @@ function clearFrame() {
   ctx.fillRect(0, 0, canvas.width, canvas.height);
 }
 
+function drawCurveThrough(array) {
+  var points = [];
+  points = array.slice();
+  ctx.moveTo(points[0].x, points[0].y);
+  for (i = 1; i < points.length - 2; i ++) {
+    var xc = (points[i].x + points[i + 1].x) / 2;
+    var yc = (points[i].y + points[i + 1].y) / 2;
+    ctx.quadraticCurveTo(points[i].x, points[i].y, xc, yc);
+  }
+  ctx.quadraticCurveTo(points[i].x, points[i].y, points[i+1].x,points[i+1].y);
+}
+
 function draw() {
   clearFrame();
 }
