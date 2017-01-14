@@ -17,14 +17,14 @@ function map(value, vmin, vmax, min, max) {
   return min + (max - min) * ((value - vmin) / (vmax - vmin));
 }
 
-function clearFrameWithMotionBlur() {
+function clearFrame() {
   ctx.globalAlpha = backgroundOpacity;
   ctx.fillStyle = backgroundColor;
   ctx.fillRect(0, 0, canvas.width, canvas.height);
 }
 
 function draw() {
-  clearFrameWithMotionBlur();
+  clearFrame();
 }
 
 function start() {
