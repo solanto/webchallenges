@@ -25,7 +25,7 @@ function clearFrame() {
 
 function drawCurveThrough(points) {
   ctx.moveTo(points[0].x, points[0].y);
-  for (i = 1; i < points.length - 2; i ++) {
+  for (i = 1; i < points.length - 2; i++) {
     var xc = (points[i].x + points[i + 1].x) / 2;
     var yc = (points[i].y + points[i + 1].y) / 2;
     ctx.quadraticCurveTo(points[i].x, points[i].y, xc, yc);
@@ -44,7 +44,11 @@ function Particle(moveSpeed) {
   this.moveSpeed = moveSpeed,
   this.history = [new Point, new Point, new Point, new Point, new Point],
   this.historyUpdate = function() {
-    
+    this.history[0].x = this.x
+    this.history[0].y = this.y
+    for(i = 1; i < this.history.length - 1; i++) {
+      
+    }
   },
   this.movementUpdate = function() {
     this.historyUpdate();
