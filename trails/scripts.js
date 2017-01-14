@@ -23,8 +23,12 @@ function clearFrameWithMotionBlur() {
   ctx.fillRect(0, 0, canvas.width, canvas.height);
 }
 
-function start() {
+function draw() {
   clearFrameWithMotionBlur();
+}
+
+function start() {
+  setInterval(draw, 10);
 }
 
 start();
