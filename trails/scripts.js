@@ -33,12 +33,21 @@ function drawCurveThrough(points) {
   ctx.quadraticCurveTo(points[i].x, points[i].y, points[i+1].x,points[i+1].y);
 }
 
+function Point(x, y) {
+  this.x = x,
+  this.y = y
+}
+
 function Particle(moveSpeed) {
   this.x = random(0, canvas.width),
   this.y = random(0, canvas.height),
   this.moveSpeed = moveSpeed,
-  this.history = [],
+  this.history = [new Point, new Point, new Point, new Point, new Point],
+  this.historyUpdate = function() {
+    
+  },
   this.movementUpdate = function() {
+    this.historyUpdate();
     this.yMoveDirection = random(-1,1);
     this.xMoveDirection = random(-1,1);
     this.x += this.xMoveDirection * this.moveSpeed;
