@@ -44,10 +44,11 @@ function Particle(moveSpeed) {
   this.moveSpeed = moveSpeed,
   this.history = [new Point, new Point, new Point, new Point, new Point],
   this.historyUpdate = function() {
-    this.history[0].x = this.x
-    this.history[0].y = this.y
-    for(i = 1; i < this.history.length - 1; i++) {
-      
+    this.history[0].x = this.x;
+    this.history[0].y = this.y;
+    var lastIndex = this.history.length - 1;
+    for(i = lastIndex; i > 0; i++) {
+      this.history[i] = this
     }
   },
   this.movementUpdate = function() {
